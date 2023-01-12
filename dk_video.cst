@@ -1,0 +1,53 @@
+//Copyright (C)2014-2019 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: V1.9.2.01Beta
+//Part Number: GW2A-LV18PG484C8/I7
+//Created Time: Fri 11 22 09:27:07 2019
+
+IO_LOC "I_clk" M19;
+IO_LOC "I_rst_n" AB21;
+
+IO_LOC "O_led[0]" W20;
+IO_LOC "O_led[1]" W22;
+IO_LOC "O_led[2]" V22;
+IO_LOC "O_led[3]" U20;
+
+IO_PORT "I_clk" IO_TYPE=LVCMOS33;
+IO_PORT "I_rst_n" IO_TYPE=LVCMOS15;
+
+IO_PORT "O_led[0]" IO_TYPE=LVCMOS15;
+IO_PORT "O_led[1]" IO_TYPE=LVCMOS15;
+IO_PORT "O_led[2]" IO_TYPE=LVCMOS15;
+IO_PORT "O_led[3]" IO_TYPE=LVCMOS15;
+
+//====================================
+//HDMI3 RX
+IO_LOC "I_tmds_clk_p"      C9, C10 ;
+IO_LOC "I_tmds_data_p[2]"  D4, C4  ;
+IO_LOC "I_tmds_data_p[1]"  D5, D6  ;
+IO_LOC "I_tmds_data_p[0]"  C7, C8  ;
+
+IO_PORT "I_tmds_clk_p"        IO_TYPE=LVDS25;
+IO_PORT "I_tmds_data_p[2]"    IO_TYPE=LVDS25;
+IO_PORT "I_tmds_data_p[1]"    IO_TYPE=LVDS25;
+IO_PORT "I_tmds_data_p[0]"    IO_TYPE=LVDS25;
+
+//======================================
+//HDMI4 TX
+IO_LOC "O_tmds_data_p[2]" A2,A3;
+IO_LOC "O_tmds_data_p[1]" A6,B6;
+IO_LOC "O_tmds_data_p[0]" A9,A10;
+IO_LOC "O_tmds_clk_p"     A11,A12;
+
+IO_PORT "O_tmds_data_p[2]"       IO_TYPE=LVDS25;
+IO_PORT "O_tmds_data_p[1]"       IO_TYPE=LVDS25;
+IO_PORT "O_tmds_data_p[0]"       IO_TYPE=LVDS25;
+IO_PORT "O_tmds_clk_p"           IO_TYPE=LVDS25;
+
+//======================================
+IO_LOC "IO_sda" C21;
+IO_LOC "I_scl"  D22;
+IO_PORT "IO_sda" IO_TYPE=LVCMOS33 ;
+IO_PORT "I_scl"  IO_TYPE=LVCMOS33 ;
+
